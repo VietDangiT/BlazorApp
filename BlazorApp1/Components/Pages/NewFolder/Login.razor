@@ -1,0 +1,16 @@
+﻿@page "/login"
+@using BlazorApp1.Components.Shared
+
+
+<h3>Login</h3>
+<RadzenCard class="rz-my-12 rz-mx-auto rz-p-4 rz-p-md-12" style="max-width: 600px;">
+    <RadzenTemplateForm Data=@("LoginWithDefaultValues")>
+        <RadzenLogin AllowRegister="true" AllowResetPassword="true" Username=@_username Password=@_password
+                    Login=@(args => OnLogin(args, "Login with default values"))
+                    ResetPassword=@(args => OnResetPassword(args, "Login with default values"))
+                    Register=@(args => OnRegister("Login with default values")) />
+    </RadzenTemplateForm>
+    <Notification isShow=@_isShow  notification1=@_notification/>
+</RadzenCard>
+
+

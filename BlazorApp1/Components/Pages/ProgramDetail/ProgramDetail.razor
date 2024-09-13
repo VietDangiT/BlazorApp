@@ -1,0 +1,14 @@
+﻿@page "/programDetail"
+@using BlazorApp1.Models
+@using BlazorApp1.Services
+<h3>Program Detail</h3>
+<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Start" Wrap="FlexWrap.NoWrap">
+	@foreach (var item in _orders)
+	{
+		<RadzenStack Orientation="Orientation.Vertical" Gap="20px">
+			<CustomerCard Order=item />
+		</RadzenStack>
+	}
+
+</RadzenStack>
+

@@ -1,0 +1,36 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<Counter IncrementAmount="10" />
+
+@* <RadzenDataGrid Count="@count" Data="@employees" /> *@
+@code {
+	public int count { get; set; } = 0;
+	// public List<Employee> employees { get; set; }
+	void LoadData(LoadDataArgs args)
+	{
+
+		// var query = dbContext.Employees.AsQueryable();
+
+		// if (!string.IsNullOrEmpty(args.Filter))
+		// {
+		// 	query = query.Where(args.Filter);
+		// }
+
+		// if (!string.IsNullOrEmpty(args.OrderBy))
+		// {
+		// 	query = query.OrderBy(args.OrderBy);
+		// }
+
+		// count = query.Count();
+
+		// employees = query.Skip(args.Skip.Value).Take(args.Top.Value).ToList();
+
+
+	}
+}
